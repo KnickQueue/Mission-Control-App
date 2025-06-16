@@ -15,11 +15,11 @@ export interface Service {
 }
 
 export interface GroundingChunkWeb {
-  uri: string;
-  title: string;
+  uri?: string;
+  title?: string;
 }
 
 export interface GroundingChunk {
-  web: GroundingChunkWeb;
+  web?: GroundingChunkWeb;
 }
     
