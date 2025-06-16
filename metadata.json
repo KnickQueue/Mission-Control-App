@@ -1,0 +1,5 @@
+{
+  "name": "Service Outage Mission Control",
+  "description": "A dashboard to monitor the status of various online services and display simulated Down Detector information, styled like a mission control center.",
+  "requestFramePermissions": []
+}

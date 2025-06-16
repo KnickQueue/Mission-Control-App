@@ -1,0 +1,23 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles here that are not covered by Tailwind utilities or if you prefer them separated */
+body {
+  font-family: 'Inter', sans-serif;
+  /* background-color: #020617; /* This is effectively set by #app-container in index.html */
+  /* color: #e2e8f0; /* Default text color from body tag in index.html */
+}
+
+/* 
+  The text-glow utilities and scrollbar styles from index.html <style> tag 
+  can also be moved here if you prefer a cleaner index.html.
+  For example:
+  .text-glow-cyan {
+    text-shadow: 0 0 8px theme('colors.cyan.500'), 0 0 10px theme('colors.cyan.600');
+  }
+  ...etc.
+*/
