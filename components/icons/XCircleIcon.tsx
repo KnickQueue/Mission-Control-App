@@ -6,14 +6,14 @@ interface IconProps {
 }
 
 export const XCircleIcon: React.FC<IconProps> = ({ className }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className={className}
   >
     <circle cx="12" cy="12" r="10"></circle>
@@ -21,4 +21,4 @@ export const XCircleIcon: React.FC<IconProps> = ({ className }) => (
     <line x1="9" y1="9" x2="15" y2="15"></line>
   </svg>
 );
-    
+
