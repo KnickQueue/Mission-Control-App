@@ -27,7 +27,7 @@ export class GeminiService {
         model: modelToUse,
         contents: prompt,
       });
-      return response.text?.trim() ?? "";
+      return response.text.trim();
     } catch (error) {
       console.error(`Error generating text with model ${modelToUse}:`, error);
       if (this.isRateLimitError(error)) {
@@ -65,7 +65,7 @@ export class GeminiService {
           tools: [{ googleSearch: {} }],
         },
       });
-      const summaryText = response.text?.trim() ?? "";
+      const summaryText = response.text.trim();
       const groundingMetadata = response.candidates?.[0]?.groundingMetadata;
       const sources: GroundingChunk[] = groundingMetadata?.groundingChunks?.filter(
         (chunk): chunk is GroundingChunk => chunk.web !== undefined && chunk.web.uri !== undefined && chunk.web.title !== undefined

@@ -4,6 +4,7 @@ import { GeminiService } from '../services/geminiService';
 import { LoadingSpinner } from './LoadingSpinner';
 import { AlertTriangleIcon } from './icons/AlertTriangleIcon'; // Using this for general "scan"
 import { GroundingChunk } from '../types';
+import { RefreshCwIcon } from './icons/RefreshCwIcon'; // For a refresh button if desired
 
 interface DownDetectorPanelProps {
   geminiService: GeminiService;
@@ -74,14 +75,9 @@ export const DownDetectorPanel: React.FC<DownDetectorPanelProps> = ({ geminiServ
               <ul className="list-disc list-inside space-y-1.5 text-xs pl-2">
                 {sources.map((source, index) => (
                   <li key={index} className="text-sky-500 hover:text-sky-300 transition-colors">
-                    <a
-                      href={source.web?.uri}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={source.web?.title}
-                      className="hover:underline focus:outline-none focus:ring-1 focus:ring-sky-400 rounded px-0.5 py-0.5"
-                    >
-                      {source.web?.title || source.web?.uri}
+                    <a href={source.web.uri} target="_blank" rel="noopener noreferrer" title={source.web.title}
+                       className="hover:underline focus:outline-none focus:ring-1 focus:ring-sky-400 rounded px-0.5 py-0.5">
+                      {source.web.title || source.web.uri}
                     </a>
                   </li>
                 ))}
